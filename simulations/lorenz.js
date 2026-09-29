@@ -3,7 +3,7 @@
  * the three coloured paths coincide they add up to white and then split into colour.
  */
 (function (root) {
-	const { FixedClock, sci } = root.ChaosCommon || require("./common.js");
+	const { FixedClock, sci } = root.LorenzCommon || require("./common.js");
 	const SIGMA = 10, RHO = 28, BETA = 8 / 3;
 
 	// dx/dt = σ(y − x),  dy/dt = x(ρ − z) − y,  dz/dt = xy − βz
@@ -178,14 +178,14 @@
 			"dy/dt = x (ρ − z) − y",
 			"dz/dt = x y − β z",
 			"σ = 10,  ρ = 28,  β = 8/3",
-			"<span class=\"chaos-note\">Red, green and blue start 10⁻⁵ apart. While they agree they add up to white.</span>"
+			"<span class=\"lorenz-note\">Red, green and blue start 10⁻⁵ apart. While they agree they add up to white.</span>"
 		]
 	};
 	Lorenz.derivs = derivs;
 	Lorenz.rk4 = rk4;
 	Lorenz.params = { SIGMA, RHO, BETA };
 
-	root.ChaosSimulations = root.ChaosSimulations || {};
-	root.ChaosSimulations.lorenz = Lorenz;
+	root.LorenzSimulations = root.LorenzSimulations || {};
+	root.LorenzSimulations.lorenz = Lorenz;
 	if (typeof module !== "undefined") module.exports = { Lorenz };
 })(typeof window !== "undefined" ? window : globalThis);
