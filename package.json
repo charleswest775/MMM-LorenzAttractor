@@ -1,7 +1,7 @@
 {
   "name": "mmm-lorenzattractor",
   "version": "1.0.0",
-  "description": "MagicMirror² module: The Lorenz attractor: three trajectories released 10⁻⁵ apart trace the butterfly as one, then split, while the view turns in 3D.",
+  "description": "MagicMirror² module: the Lorenz attractor, three trajectories released 10⁻⁵ apart tracing the butterfly as one, then splitting, integrated by RK4 and drawn for a Raspberry Pi without a GPU.",
   "main": "MMM-LorenzAttractor.js",
   "scripts": {
     "test": "node --test"
